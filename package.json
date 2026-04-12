@@ -16,7 +16,7 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "lint": "eslint src --ext .ts",
-    "test": "jest",
+    "test": "vitest run",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -30,21 +30,18 @@
   ],
   "author": "Superinstance Team",
   "license": "MIT",
-  "dependencies": {
-    "uuid": "^9.0.0",
-    "zlib": "^1.0.5"
-  },
   "devDependencies": {
+    "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
     "@types/uuid": "^9.0.0",
-    "typescript": "^5.0.0",
-    "tsup": "^8.0.0",
-    "eslint": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
     "jest": "^29.0.0",
-    "@types/jest": "^29.0.0",
-    "ts-jest": "^29.0.0"
+    "ts-jest": "^29.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -56,5 +53,8 @@
   "bugs": {
     "url": "https://github.com/superinstance/equipment-context-handoff/issues"
   },
-  "homepage": "https://github.com/superinstance/equipment-context-handoff#readme"
+  "homepage": "https://github.com/superinstance/equipment-context-handoff#readme",
+  "dependencies": {
+    "uuid": "^13.0.0"
+  }
 }
